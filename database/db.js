@@ -14,16 +14,9 @@ const mongoose = require('mongoose')
 //         bufferMaxEntries: 0 // and MongoDB driver buffering
 //     }));
 // }
-const url ='mongodb+srv://' + process.env.DB_HOST + '?retryWrites=true&w=majority';
+const url ='mongodb+srv://krishna:12345678@cluster0.qhejzen.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(url, {
-        useNewUrlParser : true,
-        auth:
-        {
-            username:"root",
-            password:"12345678"
-        },
-        authSource:"admin"
-        });
+        useNewUrlParser : true);
 const con = mongoose.connection;
 
 con.on('open', function (){
