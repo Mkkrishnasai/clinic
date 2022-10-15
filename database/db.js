@@ -16,7 +16,7 @@ const mongoose = require('mongoose')
 // }
 const url ='mongodb+srv://krishna:12345678@cluster0.qhejzen.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(url, {
-        useNewUrlParser : true);
+        useNewUrlParser : true});
 const con = mongoose.connection;
 
 con.on('open', function (){
