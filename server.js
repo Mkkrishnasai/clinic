@@ -22,6 +22,6 @@ app.use('/wa_templates',routes.WAROUTES);
 app.use('/whatsapp_send',routes.WAWEBHOOKROUTES);
 
 
-app.listen(process.env.ENV_PORT || 3000, () => {
-    console.log(`App Running on port ${process.env.ENV_PORT}`);
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`App Running on port ${process.env.PORT}`);
 });
