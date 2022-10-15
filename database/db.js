@@ -14,7 +14,7 @@ const mongoose = require('mongoose')
 //         bufferMaxEntries: 0 // and MongoDB driver buffering
 //     }));
 // }
-const url ='mongodb+srv://' + process.env.DB_HOST +':'+process.env.DB_PORT + '/' + process.env.DB_NAME + '?retryWrites=true&w=majority';
+const url ='mongodb+srv://' + process.env.DB_HOST + '?retryWrites=true&w=majority';
 mongoose.connect(url, {
         useNewUrlParser : true,
         auth:
@@ -26,6 +26,6 @@ mongoose.connect(url, {
         });
 const con = mongoose.connection;
 
-con.on('opne', function (){
+con.on('open', function (){
     console.log('connection established');
 });
