@@ -17,7 +17,7 @@ router.post(whatsapp_sending.sendTextMessage,async (req,res) => {
     }
 });
 
-router.get(webhooks.get_replies,async(req,res) => {
+router.post(webhooks.webhook,async(req,res) => {
     try{
         const result = await webhook_controller.saveReplies(req);
         console.log(result);
@@ -40,6 +40,10 @@ router.get(webhooks.webhook, async (req,res) => {
         }
     }
 });
+
+router.post(webhooks.webhook, async(req,res) => {
+
+})
 
 
 const sendMessage = async (payload) => {
